@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>FixForge — Issue Resolution Agent</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main>
+      <header><a href="/">fixforge<span>.</span></a><p>Approval-first AI engineering</p></header>
+      <section class="hero"><p class="eyebrow">AI GITHUB ISSUE RESOLUTION</p><h1>From issue report<br>to <em>reviewable fix.</em></h1><p>FixForge clones a repository, investigates source evidence, compares isolated patch candidates, and only publishes after your approval.</p></section>
+      <section class="card intake"><form id="job-form"><label>GitHub issue URL<input id="issue-url" required type="url" placeholder="https://github.com/owner/repository/issues/123" /></label><button>Create investigation <b>→</b></button></form><p>Repository cloning and source analysis start immediately. Codex generation, patch execution, and PR creation each require a separate approval.</p></section>
+      <p id="notice" class="notice hidden"></p>
+      <section id="job" class="hidden">
+        <div class="section-title"><div><p class="eyebrow">INVESTIGATION</p><h2 id="title">Preparing investigation</h2></div><span id="state"></span></div>
+        <article class="card status"><strong id="activity"></strong><p id="metrics"></p></article>
+        <div class="grid">
+          <article class="card"><p class="eyebrow">ISSUE CONTEXT</p><a id="issue-link" target="_blank" rel="noreferrer"></a><p id="issue-body"></p></article>
+          <article class="card"><p class="eyebrow">REPOSITORY EVIDENCE</p><code id="repository"></code><pre id="evidence"></pre></article>
+        </div>
+        <article class="card root"><p class="eyebrow">ROOT CAUSE ASSESSMENT</p><h3 id="root-cause">Waiting for analysis approval</h3><p id="confidence"></p></article>
+        <section id="approvals" class="card"><p class="eyebrow">HUMAN APPROVAL CHECKPOINTS</p><div id="action-feedback" class="action-feedback hidden" role="status" aria-live="polite"><strong id="feedback-title"></strong><p id="feedback-detail"></p></div><div id="approval-list"></div></section>
+        <section id="candidates" class="hidden"><p class="eyebrow">CANDIDATE PATCHES</p><div id="candidate-list"></div></section>
+        <section id="pr" class="card hidden"><p class="eyebrow">PULL REQUEST</p><h3 id="pr-title"></h3><pre id="pr-body"></pre><a id="pr-link" target="_blank" rel="noreferrer"></a></section>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

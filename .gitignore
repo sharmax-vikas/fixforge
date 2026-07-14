@@ -1,0 +1,13 @@
+.env
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.fixly/
+.fixforge/
+.venv/
+.python/
+.uv-cache/
+.workspaces/
+.agents/
+# Legacy prototype UI; FixForge serves fixforge/static instead.
+web/

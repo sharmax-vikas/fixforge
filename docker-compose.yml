@@ -1,0 +1,10 @@
+services:
+  fixforge:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file: .env
+    volumes:
+      - fixforge-workspaces:/app/.fixforge
+volumes:
+  fixforge-workspaces:
